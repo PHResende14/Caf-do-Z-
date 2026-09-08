@@ -1,0 +1,495 @@
+<!--Criação de um documento HTML5 bem estruturado com uso correto de elementos como <doctype>, <html>, <head> e <body>.
+         Implementação de cabeçalho com logótipo e navegação funcional através de links.
+         Organização do conteúdo principal com elementos semânticos como <main>, <section>, <article> e <aside>.
+         Inserção e otimização de imagens, vídeos ou áudios relevantes para o contexto da página.
+         Construção de listas e tabelas para apresentação estruturada de serviços, preços ou horários.
+         Desenvolvimento de um formulário de contacto com campos essenciais e estrutura acessível.
+         Aplicação de práticas de acessibilidade e semântica para melhorar a experiência de utilizador.
+         Integração de um rodapé com informações complementares e links úteis.
+         Estilização e organização visual da página com foco na clareza, responsividade e legibilidade.
+        
+        CRIAÇÃO DE UMA HOMEPAGE - PARTE I
+        ENUNCIADO
+        Com este caso prático, pretende-se que desenvolva a página inicial (homepage)
+        de um website fictício para um negócio à sua escolha. O objetivo é aplicar os
+        conceitos fundamentais de HTML5 abordados nas unidades deste módulo. A
+        sua homepage deve incluir:
+
+         Estrutura Básica do Documento HTML5:
+         Crie um documento HTML5 bem estruturado com <!DOCTYPE>, <html>, <head>, e <body>.
+         Adicione um título relevante na tag <title> e meta tags apropriadas no <head>.
+
+         Cabeçalho e Navegação:
+         Insira um cabeçalho (<header>) com um logótipo e um menu de navegação (<nav>).
+         O menu de navegação deve conter links (<a>) para diferentes secções do website (ex.: Home, Sobre, Serviços, Contacto).
+
+         Conteúdo Principal:
+         Utilize elementos semânticos do HTML5 como <main>, <section>, <article> e <aside> para organizar o conteúdo principal da página.
+         Inclua uma secção com uma introdução ao negócio, utilizando tags de cabeçalho (<h1> a <h6>) e parágrafos (<p>).
+        
+         Imagens e Multimédia:
+         Adicione pelo menos uma imagem relevante ao conteúdo da página, utilizando a tag <img>.
+         Incorpore um vídeo ou áudio relacionado ao negócio, utilizando as tags <video> ou <audio>.
+
+         Listas e Tabelas:
+         Crie uma lista não ordenada (<ul>) ou ordenada (<ol>) com os serviços oferecidos pelo negócio.
+         Adicione uma tabela (<table>) com informações estruturadas, como horário de funcionamento ou preços de serviços.
+
+         Formulários:
+         Implemente um formulário de contacto com campos como nome, e-mail e mensagem, utilizando as tags <form>, <input>, <textarea> e <button>.
+
+         Rodapé:
+         Adicione um rodapé (<footer>) com informações de contacto, links para redes sociais e qualquer outra informação relevante.
+
+         Semântica e Acessibilidade:
+         Utilize elementos semânticos e atributos de acessibilidade (ex.: alt para imagens, aria-* para interações) para melhorar a estrutura e acessibilidade da página.-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Café do Zé - Cafetaria artesanal com cafés especiais, bolos e refeições ligeiras.">
+    <meta name="keywords" content="cafeteria, café, bolos, pequeno-almoço, refeições, café artesanal">
+    <title>Café do Zé | Cafetaria Artesanal</title>
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f6f2;
+}
+
+header {
+    background-color: #3e2723;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #3e2723;
+}
+
+section h3 {
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #3e2723;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero img {
+    width: 45%;
+    max-width: 500px;
+    border-radius: 15px;
+    display: block;
+}
+
+.button {
+    display: inline-block;
+    background-color: #6d4c41;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #3e2723;
+}
+
+
+section ul {
+    margin-left: 25px;
+}
+
+section li {
+    margin-bottom: 8px;
+}
+
+
+aside {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #eee4d7;
+    border-left: 5px solid #6d4c41;
+    border-radius: 5px;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #6d4c41;
+    color: white;
+}
+
+form {
+    max-width: 700px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+button {
+    background-color: #6d4c41;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #3e2723;
+}
+
+footer {
+    background-color: #3e2723;
+    color: white;
+    padding: 50px 8%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+footer h2,
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: white;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer address {
+    font-style: normal;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#home" aria-label="Ir para a página inicial">
+                ☕ Café do Zé
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#time">Horário de Funcionamento</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> 
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Bem-vindo ao Café do Zé!</h1>
+                <p>Descubra o sabor do café artesanal e desfrute de momentos únicos no nosso espaço acolhedor.</p>
+                <a href="#contact" class="button">Contacte-nos</a>
+            </div>
+            <img src="cafe.jpg" alt="Imagem do Café" width="450" height="300" loading="lazy">
+        </section>
+
+        <section id="about">
+            <h2>Sobre Nós</h2>
+            <article>
+                <h3>Nossa História</h3>
+                <article>
+                <h3>Nossa História</h3>
+                <p>O Café do Zé é um espaço dedicado a proporcionar experiências únicas aos amantes de café. Fundado em 2026, o nosso objetivo é oferecer produtos de alta quality e um ambiente acolhedor para todos os clientes.</p>
+                <p>Nosso compromisso é com a excelência, desde a seleção dos grãos até o atendimento personalizado. Venha nos visitar e descubra o verdadeiro sabor do café artesanal!</p>
+            </article>
+
+            <h3>Conheça o Nosso Espaço</h3>
+            <p>Veja um pequeno vídeo sobre o ambiente aconchegante da nossa cafetaria.</p>
+            <video controls width="600" preload="metadata" muted>
+                <source src="cafe.mp4" type="video/mp4">
+                O seu navegador não suporta a reprodução de vídeo.
+            </video>
+        </section>
+            
+            <section id="multimedia">
+                <video controls width="600" preload="metadata" muted>
+                    <source src="cafe.mp4" type="video/mp4">
+
+                    O seu navegador não suporta a reprodução de vídeo.
+                </video>
+            </section>
+
+        <section id="services">
+            <h2>Serviços</h2>
+            <p>No Café do Zé, oferecemos uma variedade de serviços para atender às suas necessidades.</p>
+            <ul>
+                <li>Cafés artesanais e especiais</li>
+                <li>Pequenos-almoços completos</li>
+                <li>Bolos e sobremesas caseiras</li>
+                <li>Sanduíches e refeições ligeiras</li>
+                <li>Serviço de Takeaway</li>
+                <li>Espaço aconchegante para trabalhar com Wi-Fi gratuito</li>
+            </ul>
+            
+        </section>
+        <section id="highlight">
+            <h2>Destaque do Mês</h2>
+            <article>
+                <h3>Café Especial de Origem</h3>
+                <p>
+                    Experimente o nosso café especial do mês, 
+                    preparado com grãos selecionados e técnicas 
+                    de barista para uma experiência única.
+                </p>
+            </article>
+
+            <aside>
+                <h3>Sabia que?</h3>
+                <p>
+                    No Café do Zé, acreditamos que cada xícara de café conta uma história.
+                    Aproveite o momento e descubra os sabores que temos para oferecer!
+                </p>
+            </aside>
+        </section>
+        
+        <section id="time">
+            <h2>Horário de Funcionamento</h2>
+            <p>Confira os nossos horários e venha nos visitar!</p>
+            <table>
+                <caption>Horário Semanal</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Dia</th>
+                        <th scope="col">Horário</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda a Sexta</td>
+                        <td>8:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>9:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Domingo</td>
+                        <td>10:00 - 16:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Entre em contacto</h2>
+            <p>Tem alguma dúvida? Envie-nos uma mensagem.</p>
+
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Digite o seu nome" required autocomplete="name">
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="912 345 678" autocomplete="tel">
+                </div>
+
+                <div>
+                    <label for="subject">Assunto:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="reserva">Reserva</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Escreva a sua mensagem..." required
+                    ></textarea>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">Aceito o tratamento dos meus dados para responder ao contacto.</label>
+                </div>
+
+                <button type="submit" aria-label="Enviar formulário de contacto">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+        <footer>
+        <div>
+            <h2>Café do Zé</h2>
+            <p>Cafetaria artesanal para bons momentos.</p>
+        </div>
+
+        <div>
+            <h3>Contacto</h3>
+            <address>
+                Rua Principal, 123<br>
+                Porto, Portugal<br>
+                <a href="tel:+351912345678">+351 912 345 678</a><br>
+                <a href="mailto:info@cafedoze.pt">info@cafedoze.pt</a>
+            </address>
+        </div>
+
+        <div>
+            <h3>Redes Sociais</h3>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">TikTok</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <p>&copy; 2026 Café do Zé. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
